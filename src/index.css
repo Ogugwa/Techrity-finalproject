@@ -1,0 +1,50 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@theme{
+  --font-work-sans: 'Work Sans', sans-serif; 
+  --font-anton: 'Anton', sans-serif;
+}
+@layer components{
+  .gradient-text{
+    @apply bg-gradient-to-r from-[#21A4FF]  to-[#C329FF99] text-transparent bg-clip-text;
+  }
+  .gradient-bg{
+    @apply bg-gradient-to-r from-[#21A4FF]  to-[#C329FF99];
+  }
+  .navbar-gradient{
+    @apply bg-gradient-to-r from-[#FFFFFF80] to-[#FFFFFF33];
+  }
+  .hero-gradient{
+    @apply bg-gradient-to-r from-[#D898FF] to-[#61C5FE];
+  }
+  .footer-gradient{
+    @apply bg-gradient-to-r from-[#ffffff] to-[#dba0ff];
+  }
+  .sigin-gradient{
+    @apply bg-gradient-to-r from-[#cedfff] to-[#dfa9ff];
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+ 
+} 
