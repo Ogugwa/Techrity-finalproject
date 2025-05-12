@@ -27,9 +27,9 @@ const Navbar = () => {
         <ul className='hidden md:flex flex-row justify-center items-center md:gap-3 lg:gap-10 font-medium font-size-[1.2rem] dark:*text-white'>
             <li className=''><Link to='/'>Home</Link></li>
             <select id='select' className='border-none p-2'onChange={handleSelectChange}> 
-              <option value="">Explore</option>
-              <option value="/marketplace" >Marketplace</option>
+              <option value="">Marketplace</option>
               <option value="/nfts">NFTs</option>
+              <option value="/crypto">Crypto</option>
               <option value="/tokens">Tokens</option>
               <option value="/collections">Collections</option>
             </select>

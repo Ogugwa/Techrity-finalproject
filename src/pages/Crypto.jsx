@@ -8,7 +8,7 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 
-const Marketplace = () => {
+const Crypto = () => {
   const [exchangeRates, setExchangeRates] = useState(null);
 
   // Fetch exchange rates from CoinGecko
@@ -157,4 +157,4 @@ const Marketplace = () => {
   );
 };
 
-export default Marketplace;
+export default Crypto;
