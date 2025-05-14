@@ -8,7 +8,9 @@ import Register from './pages/Register';
 import Portfolio from './pages/Portfolio';
 import ForgotPassword from './pages/ForgotPassword';
 import Terms from './pages/Terms';
-import Marketplace from './pages/Marketplace';
+import Crypto from './pages/Crypto';
+import Nft from './pages/Nft';
+
 function App() {
   return (
     <>
@@ -20,7 +22,8 @@ function App() {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/terms" element={<Terms />} />
-        <Route path="/marketplace" element={<Marketplace />} />
+        <Route path="/crypto" element={<Crypto />} />
+        <Route path="/nfts" element={<Nft />} />
       </Routes>
     </>
   );

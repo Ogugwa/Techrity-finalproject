@@ -8,7 +8,7 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 
-const Marketplace = () => {
+const Crypto = () => {
   const [exchangeRates, setExchangeRates] = useState(null);
 
   // Fetch exchange rates from CoinGecko
@@ -60,19 +60,47 @@ const Marketplace = () => {
 
   return (
     <main className="px-4 py-10 min-h-screen text-black font-work-sans">
-        {/* Hero Section */}
-        <div className='bg-gradient-to-r from-[#e5eaff] to-[#d5e9ff] flex flex-col md:flex-row justify-center items-center py-10'>
-            <div>
-                <p className='font-normal text-6xl'>Explore Our <br/>  ExtraOrdinary Collection</p>
+     {/* Hero Section */}
+        <section className="bg-gradient-to-r from-[#e5eaff] to-[#d5e9ff] flex flex-col md:flex-row justify-between items-center gap-6 py-16 px-6 rounded-xl">
+            {/* Text Block */}
+            <div className="flex flex-col items-start max-w-md">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-6">
+                 Explore Our <br /> ExtraOrdinary Collection
+                </h1>
+                <img
+                src="/images/coin.png"
+                alt="golden coin"
+                className="w-16 h-16 animate-bounce mt-4"
+                />
             </div>
-            <div>
-                <p className='bg-gradient-to-r from-[#9F04FF] to-[#222AE2] text-transparent bg-clip-text
-                font-normal text-[19.76rem] font-anton'>NFT<br/>
-                {/* <span>CRY</span><span>PTO</span> */}
-                </p>
-                <p>CRY <span>PTO</span></p>
-            </div>
+        {/* NFT + CRYPTO Visual Block */}
+        <div className="relative flex flex-col items-center">
+            {/* Top Coin */}
+            <img
+            src="/images/coin.png"
+            alt="golden coin"
+            className="w-20 h-20 mb-2 animate-spin-slow"
+            />
+             {/* NFT + CRYPTO Texts */}
+        <div className="text-center leading-none font-anton text-[7rem] bg-gradient-to-r from-[#c5ccf4] to-[#9F04FF] text-transparent bg-clip-text ">
+            <h2 className=" sm:text-[9rem] md:text-[12rem] lg:text-[16rem] mb-0">
+            NFT
+        </h2>
+        <h3 className="text-[#c5ccf4]  sm:text-[9rem] md:text-[12rem] lg:text-[16rem] mt-[-2rem]">
+            CRY<span className='bg-gradient-to-r from-[#c5ccf4] to-[#9F04FF] text-transparent bg-clip-text'>PTO</span>
+        </h3>
         </div>
+
+        {/* Bottom Coin */}
+        <img
+        src="/images/coin.png"
+        alt="golden coin"
+        className="w-20 h-20 mt-2 animate-spin-slow"
+        />
+    </div>
+    </section>
+
+
       {/* Header */}
       <div className="mb-8 text-center">
         <h1 className="text-4xl font-bold mb-2 gradient-text">Web3 Marketplace</h1>
@@ -129,4 +157,4 @@ const Marketplace = () => {
   );
 };
 
-export default Marketplace;
+export default Crypto;
