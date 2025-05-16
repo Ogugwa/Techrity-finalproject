@@ -7,6 +7,8 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from 'recharts';
+import { FaArrowTrendDown } from "react-icons/fa6";
+import { GiBouncingSpring } from "react-icons/gi";
 
 const Crypto = () => {
   const [exchangeRates, setExchangeRates] = useState(null);
@@ -99,13 +101,35 @@ const Crypto = () => {
         />
     </div>
     </section>
-
-
-      {/* Header */}
-      <div className="mb-8 text-center">
-        <h1 className="text-4xl font-bold mb-2 gradient-text">Web3 Marketplace</h1>
-        <p className="text-gray-400">Track crypto prices and explore featured NFTs & tokens</p>
+    
+      {/* Info Section */}
+      <div className="mt-[-1rem] bg-gradient-to-r from-[#e5eaff] to-[#d5e9ff]  text-center my-12 ">
+        <h3 className="text-3xl sm:text-4xl font-medium shadow">💎 Trade and Sell Your Coins 💎</h3>
       </div>
+
+      {/* Market Overview */}
+       <div className="mt-[-3rem]  bg-gradient-to-r from-[#e5eaff] to-[#d5e9ff]  p-2 ">
+         <h2 className="text-2xl md:text-4xl font-medium mb-4">Market Overview <FaArrowTrendDown className="inline-block text-fuchsia-500" /></h2>
+      </div>
+      {/* Chart */}
+      <div className="bg-gradient-to-r from-[#e5eaff] to-[#d5e9ff]  p-5  mb-10">
+        
+        <ResponsiveContainer width="100%" height={300}>
+          <LineChart data={chartData}>
+            <XAxis dataKey="time" stroke="#aaa" />
+            <YAxis stroke="#aaa" />
+            <Tooltip />
+            <Line type="monotone" dataKey="price" stroke="#00d09c" strokeWidth={2} />
+          </LineChart>
+        </ResponsiveContainer>
+        <h2 className="text-2xl font-semibold mb-4">USD</h2>
+      </div>
+
+      {/* Top Trade Section */}
+      <div>
+        <h2 className="text-2xl md:text-4xl font-medium mb-4">Top Trades <GiBouncingSpring className='inline-block text-fuchsia-500' /></h2>
+      </div>
+      
 
       {/* Exchange Rates */}
       <div className="bg-gray-900 p-5 rounded mb-8 max-w-xl mx-auto">
@@ -120,18 +144,7 @@ const Crypto = () => {
         )}
       </div>
 
-      {/* Chart */}
-      <div className="bg-gray-900 p-5 rounded mb-10 max-w-4xl mx-auto">
-        <h2 className="text-xl font-semibold mb-4">ETH Price Trend</h2>
-        <ResponsiveContainer width="100%" height={300}>
-          <LineChart data={chartData}>
-            <XAxis dataKey="time" stroke="#aaa" />
-            <YAxis stroke="#aaa" />
-            <Tooltip />
-            <Line type="monotone" dataKey="price" stroke="#00d09c" strokeWidth={2} />
-          </LineChart>
-        </ResponsiveContainer>
-      </div>
+      
 
       {/* Marketplace Items */}
       <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">

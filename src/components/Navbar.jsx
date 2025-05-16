@@ -54,7 +54,7 @@ const Navbar = () => {
          }
       </div> 
          {/* Mobile Menu */}
-         <ul className={`${nav ? 'fixed flex flex-col z-10 left-[20%] top-24 w-full gap-3 ease-in-out duration-500' : 'fixed left-[-100%] top-24 ease-in-out duration-500'}`}>
+         <ul className={`${nav ? ' bg-gray-200 fixed flex flex-col z-10 left-[20%] top-24 w-full gap-3 ease-in-out duration-500' : 'fixed left-[-100%] top-24 ease-in-out duration-500'}`}>
             <li className=''><Link to="/" onClick={handleNav}>Home</Link></li>
             <li>
               <select className='border-none p-2' onChange={(e) => { handleSelectChange(e); handleNav(); }}> 
