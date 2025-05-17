@@ -15,23 +15,7 @@ import Footer from '../components/Footer';
 
 
 const Crypto = () => {
-  // const [exchangeRates, setExchangeRates] = useState(null);
-
-  // useEffect(() => {
-  //   const fetchRates = async () => {
-  //     try {
-  //       const res = await fetch(
-  //         'https://api.coingecko.com/api/v3/simple/price?ids=ethereum,bitcoin&vs_currencies=usd'
-  //       );
-  //       const data = await res.json();
-  //       setExchangeRates(data);
-  //     } catch (err) {
-  //       console.error('Failed to fetch exchange rates:', err);
-  //     }
-  //   };
-  //   fetchRates();
-  // }, []);
-
+  
   const chartData = [
     { time: 'Jan', price: 1500 },
     { time: 'Feb', price: 1700 },
