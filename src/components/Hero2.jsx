@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Hero2 = () => {
+const Hero2 = ({ showHeader = true }) => {
   return (
     <div className='flex flex-col items-center justify-center hero-gradient w-full font-work-sans px-4'>
-  <h2 className='font-medium text-black text-3xl sm:text-5xl text-center'>Popular Currencies</h2>
+      {showHeader && <h2 className='font-medium text-black text-3xl sm:text-5xl text-center'>Popular Currencies</h2>}
 
   <div className='w-full mt-10 overflow-x-auto'>
     <table className='min-w-[600px] w-full text-[1rem] text-left border-separate border-spacing-y-3'>
