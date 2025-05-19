@@ -60,6 +60,7 @@ const Navbar = () => {
               <select className='border-none p-2' onChange={(e) => { handleSelectChange(e); handleNav(); }}> 
                 <option value="" >Marketplace</option>
                 <option value="/nfts">NFTs</option>
+                <option value="/crypto">Crypto</option>
                 <option value="/tokens">Tokens</option>
                 <option value="/collections">Collections</option>
               </select>
